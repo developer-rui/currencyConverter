@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgb(49, 109, 86) 0%, rgb(35, 80, 64) 100%);
 }
 
 .contentWrapper {
@@ -50,7 +50,7 @@
 }
 
 .rateDisplay {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgb(49, 109, 86) 0%, rgb(35, 80, 64) 100%);
   color: white;
   padding: 16px 20px;
   border-radius: 12px;
@@ -58,7 +58,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(49, 109, 86, 0.4);
 }
 
 .rateLabel {
@@ -106,8 +106,8 @@
 }
 
 .overrideInput:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: rgb(49, 109, 86);
+  box-shadow: 0 0 0 3px rgba(49, 109, 86, 0.1);
 }
 
 .overrideInput::placeholder {
@@ -134,8 +134,8 @@
 }
 
 .activeRateInfo {
-  background: #f0f4ff;
-  border: 2px solid #d0d9ff;
+  background: #e8f5f0;
+  border: 2px solid #b8dccf;
   padding: 14px 18px;
   border-radius: 10px;
   display: flex;
@@ -147,7 +147,7 @@
 .activeRateLabel {
   font-size: 13px;
   font-weight: 600;
-  color: #667eea;
+  color: rgb(49, 109, 86);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -162,7 +162,7 @@
 }
 
 .overrideBadge {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgb(49, 109, 86) 0%, rgb(35, 80, 64) 100%);
   color: white;
   padding: 3px 10px;
   border-radius: 12px;
@@ -200,9 +200,9 @@
 }
 
 .modeButton.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgb(49, 109, 86) 0%, rgb(35, 80, 64) 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(49, 109, 86, 0.4);
   cursor: default;
 }
 
@@ -239,20 +239,20 @@
 }
 
 .inputWrapper:focus-within {
-  border-color: #667eea;
+  border-color: rgb(49, 109, 86);
   background: white;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 3px rgba(49, 109, 86, 0.1);
 }
 
 .outputWrapper {
-  background: #f0f4ff;
-  border-color: #d0d9ff;
+  background: #e8f5f0;
+  border-color: #b8dccf;
 }
 
 .currency {
   font-size: 24px;
   font-weight: 700;
-  color: #667eea;
+  color: rgb(49, 109, 86);
   margin-right: 12px;
   min-width: 20px;
 }
@@ -323,7 +323,7 @@
 }
 
 .historyTable thead {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgb(49, 109, 86) 0%, rgb(35, 80, 64) 100%);
   color: white;
 }
 
@@ -349,6 +349,10 @@
   border-bottom: none;
 }
 
+.emptyRow {
+  opacity: 0.3;
+}
+
 .historyTable td {
   padding: 12px 10px;
   color: #333;
@@ -361,7 +365,7 @@
 }
 
 .overrideActive {
-  color: #667eea;
+  color: rgb(49, 109, 86);
   font-weight: 600;
 }
 

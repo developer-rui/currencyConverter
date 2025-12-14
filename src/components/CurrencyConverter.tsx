@@ -176,22 +176,23 @@ export const CurrencyConverter = () => {
         </div>
         </div>
 
-        {history.length > 0 && (
-          <div className={styles.historySection}>
-            <h2 className={styles.historyTitle}>Conversion History (Last 5)</h2>
-            <div className={styles.tableWrapper}>
-              <table className={styles.historyTable}>
-                <thead>
-                  <tr>
-                    <th>Time</th>
-                    <th>Real-time Rate</th>
-                    <th>Override Rate</th>
-                    <th>From</th>
-                    <th>To</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {history.map((entry) => (
+        <div className={styles.historySection}>
+          <h2 className={styles.historyTitle}>Conversion History (Last 5)</h2>
+          <div className={styles.tableWrapper}>
+            <table className={styles.historyTable}>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Real-time Rate</th>
+                  <th>Override Rate</th>
+                  <th>From</th>
+                  <th>To</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.from({ length: 5 }).map((_, index) => {
+                  const entry = history[index];
+                  return entry ? (
                     <tr key={entry.id}>
                       <td className={styles.timeCell}>
                         {entry.timestamp.toLocaleTimeString()}
@@ -223,12 +224,20 @@ export const CurrencyConverter = () => {
                         </span>
                       </td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  ) : (
+                    <tr key={`empty-${index}`} className={styles.emptyRow}>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
