@@ -1,5 +1,6 @@
 ### Currency Converter - implemented features summary
 
+0. I used `npx create-vite@latest my-vite-app -- --template react-ts` to quickly build a starting template for React app.
 
 1. I started with creating the logic for a dummy EUR/USD fx rate provider function, as the display will depend on it. Since it is some very specific behaviour with initial value & changes in time (and possibly, replaced in the future by real API calls), it was a good idea to have a dedicated file for it, for better maintainance and code modularity. The feature is implemented using a custom hook: useEurUsdRate.
 
