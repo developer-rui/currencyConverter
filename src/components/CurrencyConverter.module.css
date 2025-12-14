@@ -1,0 +1,413 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 30px;
+  width: calc(100% - 40px);
+  max-width: calc(100% - 40px);
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+@media (min-width: 1200px) {
+  .contentWrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 1400px;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 1200px) {
+  .card {
+    flex: 0 0 500px;
+    max-width: 500px;
+  }
+}
+
+.title {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.rateDisplay {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.rateLabel {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.rateValue {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.overrideSection {
+  margin-bottom: 20px;
+}
+
+.overrideLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.overrideInputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overrideInput {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.overrideInput:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.overrideInput::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
+
+.overrideStatus {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.statusValid {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.statusInvalid {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.activeRateInfo {
+  background: #f0f4ff;
+  border: 2px solid #d0d9ff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activeRateLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.activeRateValue {
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overrideBadge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modeSwitch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: #f5f5f5;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.modeButton {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #666;
+}
+
+.modeButton:hover {
+  background: #e8e8e8;
+  color: #333;
+}
+
+.modeButton.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  cursor: default;
+}
+
+.converterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup,
+.outputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inputWrapper,
+.outputWrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.outputWrapper {
+  background: #f0f4ff;
+  border-color: #d0d9ff;
+}
+
+.currency {
+  font-size: 24px;
+  font-weight: 700;
+  color: #667eea;
+  margin-right: 12px;
+  min-width: 20px;
+}
+
+.input {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: #bbb;
+}
+
+.output {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.arrow {
+  font-size: 32px;
+  color: #667eea;
+  text-align: center;
+  font-weight: bold;
+  transform: rotate(90deg);
+}
+
+.historySection {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+  .historySection {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.historyTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 24px 0;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 14px;
+}
+
+.historyTable thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.historyTable th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.historyTable tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.historyTable tbody tr:hover {
+  background-color: #f9f9ff;
+}
+
+.historyTable tbody tr:last-child {
+  border-bottom: none;
+}
+
+.historyTable td {
+  padding: 12px 10px;
+  color: #333;
+}
+
+.timeCell {
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.overrideActive {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.noOverride {
+  color: #bbb;
+  font-size: 16px;
+}
+
+.amount {
+  font-weight: 700;
+  color: #333;
+  margin-right: 6px;
+}
+
+.currencyLabel {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .rateDisplay {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .historyTable {
+    font-size: 12px;
+  }
+
+  .historyTable th,
+  .historyTable td {
+    padding: 8px 6px;
+  }
+}
